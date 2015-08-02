@@ -16,7 +16,6 @@ public class InputHandler : MonoBehaviour {
 	{
 		_input.horizontal = Input.GetAxisRaw ("Horizontal");
 		_input.vertical = Input.GetAxisRaw ("Vertical");
-
 		if(Input.GetButtonDown ("Jump"))
 		{
 			_input.a = true;
