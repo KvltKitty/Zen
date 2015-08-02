@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour {
 	{
 	
 	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag.Equals("Tile")){
