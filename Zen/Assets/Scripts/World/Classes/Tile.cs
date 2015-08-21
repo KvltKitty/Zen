@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 [System.Serializable]
 public abstract class Tile  {
 	public enum tileType
@@ -10,6 +11,7 @@ public abstract class Tile  {
 		Water
 	}
 	public tileType Type;
+
 
 	public abstract void Terrashift(tileType type);
 
