@@ -12,6 +12,12 @@ public abstract class Tile  {
 	public tileType Type;
 
 	public abstract void Terrashift(tileType type);
+
+	public abstract void ActionI();
+
+	public abstract void ActionII();
+
+	public abstract void ActionIII();
 	// Use this for initialization
 
 }

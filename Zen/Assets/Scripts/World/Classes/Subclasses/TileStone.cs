@@ -6,4 +6,19 @@ public class TileStone : Tile {
 	{
 		
 	}
+
+	public override void ActionI()
+	{
+		
+	}
+	
+	public override void ActionII()
+	{
+		
+	}
+	
+	public override void ActionIII()
+	{
+		
+	}
 }
