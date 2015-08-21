@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class Tile : MonoBehaviour {
+[System.Serializable]
+public class Tile  {
 	public enum tileType{
 		Dirt,
 		Grass,
