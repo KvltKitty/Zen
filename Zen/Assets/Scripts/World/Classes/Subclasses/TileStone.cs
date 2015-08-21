@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TileBehavior : MonoBehaviour {
-	public Tile tile;
+public class TileStone : Tile {
+
 	// Use this for initialization
 	void Start () {
 	
