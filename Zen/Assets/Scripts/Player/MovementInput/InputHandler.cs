@@ -4,8 +4,10 @@ using System.Collections;
 public class InputHandler : MonoBehaviour {
 	public PlayerInput _input;
 	private PlayerPhysics _controller;
+	private GameObject _ui;
 	// Use this for initialization
 	void Start () {
+		_ui = GameObject.Find("Keys");
 		_input = new PlayerInput();
 		_input.Reset ();
 		_controller = this.GetComponent<PlayerPhysics>();
@@ -19,6 +21,7 @@ public class InputHandler : MonoBehaviour {
 		if(Input.GetButtonDown ("Jump"))
 		{
 			_input.a = true;
+			_ui.SendMessage ("receiveKey", "A", SendMessageOptions.RequireReceiver);
 		}
 		else if(Input.GetButtonUp ("Jump"))
 		{
@@ -27,6 +30,7 @@ public class InputHandler : MonoBehaviour {
 		if(Input.GetButtonDown ("Fire1"))
 		{
 			_input.x = true;
+			_ui.SendMessage ("receiveKey", "X", SendMessageOptions.RequireReceiver);
 		}
 		else if(Input.GetButtonUp ("Fire1"))
 		{
@@ -35,6 +39,7 @@ public class InputHandler : MonoBehaviour {
 		if(Input.GetButtonDown ("Fire2"))
 		{
 			_input.b = true;
+			_ui.SendMessage ("receiveKey", "B", SendMessageOptions.RequireReceiver);
 		}
 		else if(Input.GetButtonUp ("Fire2"))
 		{
@@ -43,10 +48,12 @@ public class InputHandler : MonoBehaviour {
 		if(Input.GetButtonDown ("Fire3"))
 		{
 			_input.y = true;
+			_ui.SendMessage ("receiveKey", "Y", SendMessageOptions.RequireReceiver);
 		}
 		else if(Input.GetButtonUp ("Fire3"))
 		{
 			_input.y = false;
+
 		}
 		_controller.setForce (_input);
 	}
